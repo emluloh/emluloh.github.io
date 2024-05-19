@@ -136,7 +136,7 @@ document.addEventListener('DOMContentLoaded', async function() {
             const columnCond = allConditions[Math.floor(Math.random() * allConditions.length)];
             if (!columnConditions.includes(columnCond)) {
                 columnConditions.push(columnCond);
-                document.getElementById(`cond${String.fromCharCode(65 + columnConditions.length - 1)}`).src = `~/Public_html/PokeDoku/images/${columnCond}.png`;
+                document.getElementById(`cond${String.fromCharCode(65 + columnConditions.length - 1)}`).src = `images/${columnCond}.png`;
                 document.getElementById(`cond${String.fromCharCode(65 + columnConditions.length - 1)}`).alt = `${columnCond} Type`;
             }
         }
