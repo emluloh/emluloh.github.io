@@ -12,35 +12,41 @@
 body {
     background-color: lightgray;
 }
+
 .game-container {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 20px;
 }
+
 .row-conditions {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 300px;
-    margin-top: 50px;
+    margin-top: 20px;
 }
+
 .row-conditions img {
     transform-origin: center;
     width: 90px;
     height: auto;
 }
+
 #sudoku-board {
     display: grid;
     grid-template-columns: repeat(3, 123px);
     gap: 5px;
     margin-bottom: 20px;
 }
+
 .cond-headers {
     display: flex;
     justify-content: center;
     margin: 0 auto;
 }
+
 .cond-headers img {
     display: block;
     width: 90px;
@@ -59,6 +65,7 @@ body {
     background-color: #000;
     background-color: rgba(0, 0, 0, 0.4);
 }
+
 .modal .modal-content {
     background-color: #fefefe;
     margin: 15% auto;
@@ -68,17 +75,21 @@ body {
     max-width: 300px;
     overflow-y: auto;
 }
+
 .modal .close {
     color: #aaa;
     float: right;
     font-size: 28px;
     font-weight: bold;
 }
-.modal .close:hover, .modal .close:focus {
+
+.modal .close:hover,
+.modal .close:focus {
     color: black;
     text-decoration: none;
     cursor: pointer;
 }
+
 #pokemon-search {
     width: calc(100% - 20px);
     padding: 10px;
@@ -86,24 +97,28 @@ body {
     border: 1px solid #ccc;
     border-radius: 5px;
 }
+
 #pokemon-options {
-   /*button {
+    /*button {
        */
-       /*
+    /*
    }
    */
 }
+
 #pokemon-options img {
     display: flex;
     margin: 5px;
     justify-content: center;
 }
+
 #pokemon-options div {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 5px;
 }
+
 .cell {
     background-color: #fff;
     width: 120px;
@@ -115,24 +130,29 @@ body {
     cursor: pointer;
     transition: background-color 0.1s ease-in-out;
 }
+
 .cell:hover {
     background-color: #f5f5f5;
 }
+
 .pokemon-entry {
     display: flex;
     align-items: center;
 }
+
 .pokemon-entry img {
     width: 50px;
     height: 50px;
     margin-right: 10px;
 }
+
 #lives-counter {
     display: flex;
     text-align: center;
     font-size: 16pt;
     margin-bottom: 10px;
 }
+
 .confetti-container {
     position: fixed;
     top: 0;
@@ -143,6 +163,7 @@ body {
     pointer-events: none;
     overflow: hidden;
 }
+
 .confetti-container .confetti-piece {
     position: absolute;
     width: 10px;
@@ -150,42 +171,81 @@ body {
     background-color: #ff0;
     animation: fall linear forwards;
 }
+
 @keyframes fall {
     to {
         transform: translateY(100vh);
-   }
+    }
 }
+
 @keyframes confetti-left {
     0% {
         transform: translateY(0) rotate(-30deg);
-   }
+    }
+
     100% {
         transform: translateY(125vh) rotate(-300deg);
-   }
+    }
 }
+
 @keyframes confetti-right {
     0% {
         transform: translateY(0) rotate(30deg);
-   }
+    }
+
     100% {
         transform: translateY(125vh) rotate(300deg);
-   }
+    }
 }
+
 .glow-red {
     transition: box-shadow 0.5s ease-in-out;
     box-shadow: 0 0 8px red;
 }
+
 @keyframes pulseAnimation {
     0% {
         transform: scale(1);
-   }
+    }
+
     50% {
         transform: scale(1.15);
-   }
+    }
+
     100% {
         transform: scale(1);
-   }
+    }
 }
+
 .pulse {
     animation: pulseAnimation 0.7s;
+}
+
+@media screen and (max-width:768px) {
+    .cell {
+        width: 88px;
+        height: 88px;
+    }
+
+    .row-conditions {
+        height: 220px;
+        margin-top: 10px;
+    }
+
+    .row-conditions img {
+        width: 70px;
+    }
+
+    #sudoku-board {
+        grid-template-columns: repeat(3, 90px);
+    }
+    
+    .cond-headers {
+        margin: 0;
+    }
+
+    .cond-headers img {
+        width: 70px;
+        margin: 0 10px;
+    }
 }
