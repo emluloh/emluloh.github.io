@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokémon Sudoku</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="game-container">
+        <div class="row-conditions">
+            <img id="rowCondA" src="" alt="Row Cond A">
+            <img id="rowCondB" src="" alt="Row Cond B">
+            <img id="rowCondC" src="" alt="Row Cond C">
+        </div>
+        <div class="sudoku-container">
+            <div class="cond-headers">
+                <img id="condA" src="" alt="Col Cond A">
+                <img id="condB" src="" alt="Col Cond B">
+                <img id="condC" src="" alt="Col Cond C">
+            </div>
+            <div id="sudoku-board">
+                <!-- Sudoku board is dynamically loaded by JavaScript -->
+            </div>
+        </div>
+    </div>
+    <div id="lives-counter" class="row-conditions" >Lives: 4</div>
+    <div id="pokemon-selector" class="modal">
+        <div class="modal-content">
+            <span class="close">×</span>
+            <p>Select a Pokémon:</p>
+            <input type="text" id="pokemon-search" placeholder="Search Pokemon..." />
+            <div id="pokemon-options">
+                <!-- Pokémon options will be added here -->
+            </div>
+        </div>
+    </div>
+</body>
+</html>
